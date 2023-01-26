@@ -1,4 +1,4 @@
-# Nelly Delgado Planche
+# Nelly Delgado Planche 
 # :wave: The Basics of GitHub 
 
 ## 🤓 Course overview and learning outcomes 
