@@ -109,3 +109,13 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
+
+
+/* Create a new CSS class with a different background color 
+for these new buttons and buttons should be the same size as 
+the others and the text should be bold on the buttons (15) */
+
+.special{
+    background-color:lavenderblush;
+    font-weight: bold;
+}
