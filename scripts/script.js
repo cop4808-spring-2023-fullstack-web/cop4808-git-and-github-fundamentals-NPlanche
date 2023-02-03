@@ -22,6 +22,7 @@ function updateDisplay() {
 updateDisplay();
 
 function clickButton() {
+    console.log("display", display);
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
             if(buttons[i].classList.contains('operand')) 
@@ -43,13 +44,17 @@ function clickButton() {
                 inputSign(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('pi')){ //new button
-                inputSign(displayValue);
+                //goes to the pi function
+                inputPI(buttons[i].value);
+    
                 updateDisplay();
-            }else if(buttons[i].classList.contains('ln')){ //new button
+
+
+            }else if(buttons[i].classList.contains('sqr')){ //new buttonx
                 inputSign(displayValue);
                 updateDisplay();
             }else if(buttons[i].classList.contains('log')){ //new button
-                inputSign(displayValue);
+                inputLog(displayValue);
                 updateDisplay();
             }else if(buttons[i].classList.contains('power')){ //new button
                 inputSign(displayValue);
@@ -83,6 +88,23 @@ function inputOperand(operand) {
         }
     }
 }
+
+//////////////////////////////////
+//pi function
+function inputPI(){
+    var pi = 3.14159265359;
+    displayValue = pi.toString();
+}
+
+//log function
+function inputLog(x){
+    displayValue = Math.log(x).toFixed(9);
+}
+
+
+///////////////////////////////
+
+
 
 function inputOperator(operator) {
     if(firstOperator != null && secondOperator === null) {
@@ -183,6 +205,9 @@ function operate(x, y, op) {
         return x - y;
     } else if(op === '*') {
         return x * y;
+    }else if(op == 'pi'){
+
+
     } else if(op === '/') {
         if(y === 0) {
             return 'lmao';
