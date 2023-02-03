@@ -24,7 +24,8 @@ updateDisplay();
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
-            if(buttons[i].classList.contains('operand')) {
+            if(buttons[i].classList.contains('operand')) 
+            {
                 inputOperand(buttons[i].value);
                 updateDisplay();
             } else if(buttons[i].classList.contains('operator')) {
@@ -41,7 +42,19 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('pi')){ //new button
+                inputSign(displayValue);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('ln')){ //new button
+                inputSign(displayValue);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('log')){ //new button
+                inputSign(displayValue);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('power')){ //new button
+                inputSign(displayValue);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('clear'))
                 clearDisplay();
                 updateDisplay();
         }
