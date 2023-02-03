@@ -50,14 +50,14 @@ function clickButton() {
                 updateDisplay();
 
 
-            }else if(buttons[i].classList.contains('sqr')){ //new buttonx
-                inputSign(displayValue);
+            }else if(buttons[i].classList.contains('sqrt')){ //new buttonx
+                inputSqrt(displayValue);
                 updateDisplay();
             }else if(buttons[i].classList.contains('log')){ //new button
                 inputLog(displayValue);
                 updateDisplay();
-            }else if(buttons[i].classList.contains('power')){ //new button
-                inputSign(displayValue);
+            }else if(buttons[i].classList.contains('exp')){ //new button
+                inputExp(displayValue);
                 updateDisplay();
             }else if(buttons[i].classList.contains('clear'))
                 clearDisplay();
@@ -101,6 +101,15 @@ function inputLog(x){
     displayValue = Math.log(x).toFixed(9);
 }
 
+//square root function
+function inputSqrt(x){
+    displayValue = Math.sqrt(x).toFixed(9);
+}
+
+//e function
+function inputExp(x){
+    displayValue = Math.exp(x).toFixed(9);
+}
 
 ///////////////////////////////
 
