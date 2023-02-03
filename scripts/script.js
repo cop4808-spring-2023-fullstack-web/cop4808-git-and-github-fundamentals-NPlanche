@@ -43,20 +43,21 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('pi')){ //new button
+            } else if(buttons[i].classList.contains('pi')){ 
                 //goes to the pi function
                 inputPI(buttons[i].value);
-    
                 updateDisplay();
 
-
-            }else if(buttons[i].classList.contains('sqrt')){ //new buttonx
+            }else if(buttons[i].classList.contains('sqrt')){
+                //goes to the square root function
                 inputSqrt(displayValue);
                 updateDisplay();
-            }else if(buttons[i].classList.contains('log')){ //new button
+            }else if(buttons[i].classList.contains('log')){
+                //goes to the log function
                 inputLog(displayValue);
                 updateDisplay();
-            }else if(buttons[i].classList.contains('exp')){ //new button
+            }else if(buttons[i].classList.contains('exp')){
+                //goes to the e function
                 inputExp(displayValue);
                 updateDisplay();
             }else if(buttons[i].classList.contains('clear'))
@@ -89,7 +90,6 @@ function inputOperand(operand) {
     }
 }
 
-//////////////////////////////////
 //pi function
 function inputPI(){
     var pi = 3.14159265359;
@@ -110,10 +110,6 @@ function inputSqrt(x){
 function inputExp(x){
     displayValue = Math.exp(x).toFixed(9);
 }
-
-///////////////////////////////
-
-
 
 function inputOperator(operator) {
     if(firstOperator != null && secondOperator === null) {
