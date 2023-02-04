@@ -49,7 +49,6 @@ function clickButton() {
                 inputPI(buttons[i].value);
                 //updated the display
                 updateDisplay();
-
             }else if(buttons[i].classList.contains('sqrt')){
                 //goes to the square root function
                 inputSqrt(displayValue);
@@ -58,7 +57,6 @@ function clickButton() {
             }else if(buttons[i].classList.contains('log')){
                 //goes to the log function
                 inputLog(displayValue);
-                //updated the display
                 updateDisplay();
             }else if(buttons[i].classList.contains('exp')){
                 //goes to the e function
@@ -224,15 +222,25 @@ function inputPI(){
 
 //log function
 function inputLog(x){
-    displayValue = Math.log(x).toFixed(9);
+    if(x < 1){
+
+        displayValue = "Invalid"
+    }else{
+        displayValue = Math.log(x).toFixed(9);
+    }
 }
 
 //square root function
 function inputSqrt(x){
-    displayValue = Math.sqrt(x).toFixed(9);
+    if(x < 1){
+
+        displayValue = "Invalid"
+    }else{
+        displayValue = Math.sqrt(x).toFixed(9);
+    }
 }
 
-//e function
+//e^x function
 function inputExp(x){
     displayValue = Math.exp(x).toFixed(9);
 }
