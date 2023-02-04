@@ -111,11 +111,21 @@ button {
 }
 
 
-/* Create a new CSS class with a different background color 
-for these new buttons and buttons should be the same size as 
-the others and the text should be bold on the buttons (15) */
+/* Homework 2: Added new classes */
 
-.special{
+.pi{
+    background-color:lavenderblush;
+    font-weight: bold;
+}
+.sqrt{
+    background-color:lavenderblush;
+    font-weight: bold;
+}
+.log{
+    background-color:lavenderblush;
+    font-weight: bold;
+}
+.exp{
     background-color:lavenderblush;
     font-weight: bold;
 }

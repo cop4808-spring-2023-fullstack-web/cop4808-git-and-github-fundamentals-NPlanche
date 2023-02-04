@@ -43,22 +43,27 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('pi')){ 
-                //goes to the pi function
+            } /* Homework 2: */
+             else if(buttons[i].classList.contains('pi')){ 
+                //goes to the square root function
                 inputPI(buttons[i].value);
+                //updated the display
                 updateDisplay();
 
             }else if(buttons[i].classList.contains('sqrt')){
                 //goes to the square root function
                 inputSqrt(displayValue);
+                //updated the display
                 updateDisplay();
             }else if(buttons[i].classList.contains('log')){
                 //goes to the log function
                 inputLog(displayValue);
+                //updated the display
                 updateDisplay();
             }else if(buttons[i].classList.contains('exp')){
                 //goes to the e function
                 inputExp(displayValue);
+                //updated the display
                 updateDisplay();
             }else if(buttons[i].classList.contains('clear'))
                 clearDisplay();
@@ -88,27 +93,6 @@ function inputOperand(operand) {
             displayValue += operand;
         }
     }
-}
-
-//pi function
-function inputPI(){
-    var pi = 3.14159265359;
-    displayValue = pi.toString();
-}
-
-//log function
-function inputLog(x){
-    displayValue = Math.log(x).toFixed(9);
-}
-
-//square root function
-function inputSqrt(x){
-    displayValue = Math.sqrt(x).toFixed(9);
-}
-
-//e function
-function inputExp(x){
-    displayValue = Math.exp(x).toFixed(9);
 }
 
 function inputOperator(operator) {
@@ -224,4 +208,31 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+
+/*
+
+    Homework 2
+    - added 4 functions: inputPI,inputLog,inputSqrt, and inputExp
+
+*/
+//pi function
+function inputPI(){
+    var pi = 3.14159265359;
+    displayValue = pi.toString();
+}
+
+//log function
+function inputLog(x){
+    displayValue = Math.log(x).toFixed(9);
+}
+
+//square root function
+function inputSqrt(x){
+    displayValue = Math.sqrt(x).toFixed(9);
+}
+
+//e function
+function inputExp(x){
+    displayValue = Math.exp(x).toFixed(9);
 }
